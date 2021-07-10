@@ -1,17 +1,12 @@
 import React,{useEffect,useState} from 'react';
 import './PlayerDetails.css';
 import {useParams} from 'react-router-dom';
-import {useSelector} from 'react-redux';
 import avatar from '../../assets/avatar.jpg';
 import axios from 'axios';
 
-const mapState = (playersReducer)=>({
-    players:playersReducer.players
-})
 
 function PlayerDetails() {
-    const {id} = useParams();
-    const {players} = useSelector(mapState);
+    const {id} = useParams();    
     const [player,setPlayer] = useState(null);
     
   
